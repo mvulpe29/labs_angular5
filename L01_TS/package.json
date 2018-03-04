@@ -1,0 +1,16 @@
+{
+  "name": "irian_ts",
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "lite-server": "^2.3.0",
+    "typescript": "^2.7.2"
+  }
+}
