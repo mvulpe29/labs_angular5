@@ -4,4 +4,6 @@
 **/*.js
 **/*.js.map
 
-!**/webpack.config.js
+!**/**/webpack.config.js
+!**/**/karma.conf.js
+!**/**/protractor.conf.js
