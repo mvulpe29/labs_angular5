@@ -80,3 +80,28 @@ textarea.form-control {
 .placeholder {
   color: #b3b3b3;
 }
+
+.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.alert {
+  position: relative;
+  bottom: 30px;
+  left: 350px;
+  opacity: 1;
+  transition: all .3s ease .15s;
+}
+
+.alert.hide {
+  opacity: 0;
+}
+
+.error{
+  color: #a94442;
+}
+
