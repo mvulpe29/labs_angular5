@@ -3,12 +3,11 @@
     <div class="content">
       <h1> {{pizza.name}} ({{pizza.weight}}) g </h1>
       <h2> {{pizza.price | currency}} </h2>
-      <p> {{pizza.ingredients}} </p>
       <button *ngIf="pizza.canPurchase" id="add" name="add" class="flat"> Add to Cart</button>
     </div>
     <div id="image" class="image">
       <img [src]="pizza.image">
     </div>
-    <!--<tabs></tabs>-->
+    <tabs [pizza]="pizza"></tabs>
   </div>
 </div>
