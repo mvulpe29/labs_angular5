@@ -76,3 +76,7 @@ textarea.form-control {
   border-left: 4px solid #e6e3e3;
   padding-left: 10px;
 }
+
+.placeholder {
+  color: #b3b3b3;
+}
