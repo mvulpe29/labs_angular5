@@ -1,16 +1,20 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {IPizza} from "./app.model";
-import {PizzaFileService} from "./pizza-file.service";
+import {PizzaRestService} from "./pizza-rest.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private pizzas: Array<IPizza>;
 
-  constructor(private pizzaService: PizzaFileService) {
-    this.pizzas = this.pizzaService.getPizzas();
+  constructor(private pizzaService: PizzaRestService) {
+  }
+
+  ngOnInit(): void {
+    this.pizzaService.getPizzas()
+      .subscribe(pizzas => this.pizzas = pizzas);
   }
 }
