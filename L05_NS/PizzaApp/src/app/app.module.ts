@@ -4,23 +4,25 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
-import {TabsComponent} from "./tabs/tabs.component";
-import {ReviewsComponent} from "./reviews/reviews.component";
-import {PizzaFileService} from "./pizza-file.service";
-import {PizzaRestService} from "./pizza-rest.service";
+import {TabsComponent} from "./pizza-list/tabs/tabs.component";
+import {PizzaListComponent} from "./pizza-list/pizza-list.component";
+import {ReviewsComponent} from "./pizza-list/tabs/reviews/reviews.component";
+import {PizzaServiceProvider} from "./pizza-list/pizza.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    PizzaListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [PizzaFileService, PizzaRestService],
+  providers: [PizzaServiceProvider],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
