@@ -1,6 +1,6 @@
 import {inject, TestBed} from '@angular/core/testing';
 
-import {PizzaFileService} from './pizzaFile.service';
+import {PizzaFileService} from './pizza-file.service';
 
 describe('PizzaService', () => {
   beforeEach(() => {

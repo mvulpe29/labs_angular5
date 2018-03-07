@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {IPizza} from "./app.model";
-import {PizzaFileService} from "./pizzaFile.service";
+import {PizzaFileService} from "./pizza-file.service";
 
 @Component({
   selector: 'app-root',
