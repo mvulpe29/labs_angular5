@@ -1,15 +1,15 @@
 import {inject, TestBed} from '@angular/core/testing';
 
-import {PizzaService} from './pizza.service';
+import {PizzaFileService} from './pizzaFile.service';
 
 describe('PizzaService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PizzaService]
+      providers: [PizzaFileService]
     });
   });
 
-  it('should be created', inject([PizzaService], (service: PizzaService) => {
+  it('should be created', inject([PizzaFileService], (service: PizzaFileService) => {
     expect(service).toBeTruthy();
   }));
 });
