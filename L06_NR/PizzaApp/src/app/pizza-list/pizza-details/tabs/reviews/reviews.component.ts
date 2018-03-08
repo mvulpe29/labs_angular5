@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
-import {IReview} from "../../pizza.model";
+import {IReview} from "../../../pizza.model";
 
 @Component({
   selector: 'reviews',

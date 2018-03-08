@@ -4,12 +4,13 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
-import {TabsComponent} from "./pizza-list/tabs/tabs.component";
+import {TabsComponent} from "./pizza-list/pizza-details/tabs/tabs.component";
 import {PizzaListComponent} from "./pizza-list/pizza-list.component";
-import {ReviewsComponent} from "./pizza-list/tabs/reviews/reviews.component";
+import {ReviewsComponent} from "./pizza-list/pizza-details/tabs/reviews/reviews.component";
 import {PizzaServiceProvider} from "./pizza-list/pizza.service";
-import {IngredientsComponent} from './pizza-list/tabs/ingredients/ingredients.component';
-import {ExtrasComponent} from './pizza-list/tabs/extras/extras.component';
+import {IngredientsComponent} from './pizza-list/pizza-details/tabs/ingredients/ingredients.component';
+import {ExtrasComponent} from './pizza-list/pizza-details/tabs/extras/extras.component';
+import {PizzaDetailsComponent} from './pizza-list/pizza-details/pizza-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ExtrasComponent} from './pizza-list/tabs/extras/extras.component';
     ReviewsComponent,
     PizzaListComponent,
     IngredientsComponent,
-    ExtrasComponent
+    ExtrasComponent,
+    PizzaDetailsComponent
   ],
   imports: [
     BrowserModule,
