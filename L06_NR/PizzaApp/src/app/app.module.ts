@@ -4,13 +4,16 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 
 import {AppComponent} from './app.component';
-import {TabsComponent} from "./pizza-list/pizza-details/tabs/tabs.component";
-import {PizzaListComponent} from "./pizza-list/pizza-list.component";
-import {ReviewsComponent} from "./pizza-list/pizza-details/tabs/reviews/reviews.component";
-import {PizzaServiceProvider} from "./pizza-list/pizza.service";
-import {IngredientsComponent} from './pizza-list/pizza-details/tabs/ingredients/ingredients.component';
-import {ExtrasComponent} from './pizza-list/pizza-details/tabs/extras/extras.component';
-import {PizzaDetailsComponent} from './pizza-list/pizza-details/pizza-details.component';
+import {NavigationServiceProvider} from "./common/navigation.service";
+import {ReviewsComponent} from "./pizza/pizza-details/tabs/reviews/reviews.component";
+import {PizzaListComponent} from "./pizza/pizza-list/pizza-list.component";
+import {IngredientsComponent} from "./pizza/pizza-details/tabs/ingredients/ingredients.component";
+import {ExtrasComponent} from "./pizza/pizza-details/tabs/extras/extras.component";
+import {PizzaDetailsComponent} from "./pizza/pizza-details/pizza-details.component";
+import {TabsComponent} from "./pizza/pizza-details/tabs/tabs.component";
+import {PizzaServiceProvider} from "./pizza/pizza.service";
+import {RouterModule} from "@angular/router";
+import {APP_ROUTES} from "./app.routes";
 
 @NgModule({
   declarations: [
@@ -25,9 +28,10 @@ import {PizzaDetailsComponent} from './pizza-list/pizza-details/pizza-details.co
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [PizzaServiceProvider],
+  providers: [NavigationServiceProvider, PizzaServiceProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {
