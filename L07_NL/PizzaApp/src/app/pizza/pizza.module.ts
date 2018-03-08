@@ -1,10 +1,40 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
+
+import {CommonsModule} from "../commons/commons.module";
+import {TabsComponent} from "./pizza-details/tabs/tabs.component";
+import {ExtrasComponent} from "./pizza-details/tabs/extras/extras.component";
+import {ReviewsComponent} from "./pizza-details/tabs/reviews/reviews.component";
+import {PizzaListComponent} from "./pizza-list/pizza-list.component";
+import {IngredientsComponent} from "./pizza-details/tabs/ingredients/ingredients.component";
+import {PizzaDetailsComponent} from "./pizza-details/pizza-details.component";
+import {PizzaServiceProvider} from "./pizza.service";
+import {RouterModule} from "@angular/router";
+import {PIZZA_ROUTES} from "./pizza.routes";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forChild(PIZZA_ROUTES),
+    CommonsModule
   ],
-  declarations: []
+  exports: [
+    PizzaListComponent,
+    PizzaDetailsComponent
+  ],
+  declarations: [
+    TabsComponent,
+    ReviewsComponent,
+    IngredientsComponent,
+    ExtrasComponent,
+    PizzaListComponent,
+    PizzaDetailsComponent
+  ],
+  providers: [PizzaServiceProvider]
 })
-export class PizzaModule { }
+export class PizzaModule {
+}
