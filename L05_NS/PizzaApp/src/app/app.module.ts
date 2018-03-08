@@ -8,13 +8,17 @@ import {TabsComponent} from "./pizza-list/tabs/tabs.component";
 import {PizzaListComponent} from "./pizza-list/pizza-list.component";
 import {ReviewsComponent} from "./pizza-list/tabs/reviews/reviews.component";
 import {PizzaServiceProvider} from "./pizza-list/pizza.service";
+import {IngredientsComponent} from './pizza-list/tabs/ingredients/ingredients.component';
+import {ExtrasComponent} from './pizza-list/tabs/extras/extras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TabsComponent,
     ReviewsComponent,
-    PizzaListComponent
+    PizzaListComponent,
+    IngredientsComponent,
+    ExtrasComponent
   ],
   imports: [
     BrowserModule,
