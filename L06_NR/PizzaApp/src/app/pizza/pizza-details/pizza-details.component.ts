@@ -1,8 +1,9 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {IPizza} from "../pizza.model";
-import {INavigationService, NAVIGATION_SERVICE} from "../../common/navigation.service";
-import {IPizzaService, PIZZA_SERVICE} from "../pizza.service";
 import {ActivatedRoute} from "@angular/router";
+
+import {IPizza} from "../pizza.model";
+import {IPizzaService, PIZZA_SERVICE} from "../pizza.service";
+import {INavigationService, NAVIGATION_SERVICE} from "../../commons/navigation.service";
 
 @Component({
   selector: 'pizza-details',
