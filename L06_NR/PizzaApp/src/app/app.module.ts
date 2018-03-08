@@ -2,9 +2,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {RouterModule} from "@angular/router";
 
 import {AppComponent} from './app.component';
-import {NavigationServiceProvider} from "./common/navigation.service";
 import {ReviewsComponent} from "./pizza/pizza-details/tabs/reviews/reviews.component";
 import {PizzaListComponent} from "./pizza/pizza-list/pizza-list.component";
 import {IngredientsComponent} from "./pizza/pizza-details/tabs/ingredients/ingredients.component";
@@ -12,7 +12,7 @@ import {ExtrasComponent} from "./pizza/pizza-details/tabs/extras/extras.componen
 import {PizzaDetailsComponent} from "./pizza/pizza-details/pizza-details.component";
 import {TabsComponent} from "./pizza/pizza-details/tabs/tabs.component";
 import {PizzaServiceProvider} from "./pizza/pizza.service";
-import {RouterModule} from "@angular/router";
+import {NavigationServiceProvider} from "./commons/navigation.service";
 import {APP_ROUTES} from "./app.routes";
 
 @NgModule({
