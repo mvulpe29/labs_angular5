@@ -1,5 +1,6 @@
-import {Component, Input} from "@angular/core";
-import {IPizza} from "../pizza.model";
+import {Component, Inject, Input} from "@angular/core";
+import {IPizza, IReview} from "../pizza.model";
+import {IPizzaService, PIZZA_SERVICE} from "../pizza.service";
 
 @Component({
   selector: 'tabs',
@@ -13,7 +14,7 @@ export class TabsComponent {
 
   private tab: number;
 
-  constructor() {
+  constructor(@Inject(PIZZA_SERVICE) private pizzaService: IPizzaService) {
     this.tab = 1;
   }
 
@@ -23,5 +24,10 @@ export class TabsComponent {
 
   public isSelected(tid: number): boolean {
     return this.tab === tid;
+  }
+
+  public addReview(review: IReview) {
+    this.pizzaService.addReview(this.pizza, review)
+      .subscribe(pizza => this.pizza = pizza);
   }
 }
