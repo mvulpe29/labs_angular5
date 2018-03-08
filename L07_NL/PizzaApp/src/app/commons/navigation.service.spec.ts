@@ -7,11 +7,20 @@ import {INavigationService, NAVIGATION_SERVICE} from './navigation.service';
 
 @Injectable()
 export class NavigationServiceMock implements INavigationService {
+
   openPizza(id: string): Promise<boolean> {
     return Promise.resolve(true);
   }
 
   openPizzas(): Promise<boolean> {
+    return Promise.resolve(true);
+  }
+
+  openCustomer(id: string): Promise<boolean> {
+    return Promise.resolve(true);
+  }
+
+  openCustomers(): Promise<boolean> {
     return Promise.resolve(true);
   }
 

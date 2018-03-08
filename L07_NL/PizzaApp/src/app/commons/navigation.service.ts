@@ -6,6 +6,10 @@ export interface INavigationService {
 
   openPizzas(): Promise<boolean>;
 
+  openCustomer(id: string): Promise<boolean>;
+
+  openCustomers(): Promise<boolean>;
+
   getParam(activatedRoute, paramName: string): string;
 }
 
@@ -21,6 +25,14 @@ export class NavigationService implements INavigationService {
 
   openPizzas(): Promise<boolean> {
     return this.router.navigate(['pizza']);
+  }
+
+  openCustomer(id: string): Promise<boolean> {
+    return this.router.navigate(['customer', id]);
+  }
+
+  openCustomers(): Promise<boolean> {
+    return this.router.navigate(['customer']);
   }
 
   getParam(activatedRoute: ActivatedRoute, paramName: string): string {

@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {RouterModule} from "@angular/router";
 import {APP_ROUTES} from "./app.routes";
 import {PizzaModule} from "./pizza/pizza.module";
+import {CustomerModule} from "./customer/customer.module";
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {PizzaModule} from "./pizza/pizza.module";
   imports: [
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
-    PizzaModule
+    PizzaModule,
+    CustomerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
