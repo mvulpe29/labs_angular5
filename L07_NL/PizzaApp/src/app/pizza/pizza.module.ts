@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
+import {RouterModule} from "@angular/router";
 
 import {CommonsModule} from "../commons/commons.module";
 import {TabsComponent} from "./pizza-details/tabs/tabs.component";
@@ -17,6 +18,7 @@ import {PizzaServiceProvider} from "./pizza.service";
     CommonModule,
     FormsModule,
     HttpClientModule,
+    RouterModule,
     CommonsModule
   ],
   exports: [
