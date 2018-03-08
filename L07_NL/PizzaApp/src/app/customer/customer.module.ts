@@ -6,11 +6,12 @@ import {CustomerListComponent} from './customer-list/customer-list.component';
 import {CustomerDetailsComponent} from './customer-details/customer-details.component';
 import {CustomerServiceProvider} from "./customer.service";
 import {CommonsModule} from "../commons/commons.module";
+import {CUSTOMER_ROUTES} from "./customer.routes";
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule.forChild(CUSTOMER_ROUTES),
     CommonsModule
   ],
   exports: [

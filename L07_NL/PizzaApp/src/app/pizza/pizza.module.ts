@@ -12,13 +12,14 @@ import {PizzaListComponent} from "./pizza-list/pizza-list.component";
 import {IngredientsComponent} from "./pizza-details/tabs/ingredients/ingredients.component";
 import {PizzaDetailsComponent} from "./pizza-details/pizza-details.component";
 import {PizzaServiceProvider} from "./pizza.service";
+import {PIZZA_ROUTES} from "./pizza.routes";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     HttpClientModule,
-    RouterModule,
+    RouterModule.forChild(PIZZA_ROUTES),
     CommonsModule
   ],
   exports: [
