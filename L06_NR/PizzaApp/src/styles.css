@@ -105,3 +105,6 @@ textarea.form-control {
   color: #a94442;
 }
 
+.list {
+  cursor: pointer;
+}
