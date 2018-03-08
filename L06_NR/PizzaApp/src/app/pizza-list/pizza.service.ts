@@ -6,6 +6,8 @@ import {IPizza, IReview} from "./pizza.model";
 import {PIZZAS} from "./pizza.data";
 
 export interface IPizzaService {
+  getPizza(id: string): Observable<IPizza>;
+
   getPizzas(): Observable<Array<IPizza>>;
 
   addReview(pizza: IPizza, review: IReview): Observable<IPizza>
@@ -15,6 +17,13 @@ export interface IPizzaService {
 export class PizzaFileService implements IPizzaService {
 
   constructor() {
+  }
+
+  getPizza(id: string): Observable<IPizza> {
+    return Observable.create(observer => {
+      observer.next(PIZZAS.find(pizza => pizza._id === id));
+      observer.complete();
+    });
   }
 
   getPizzas(): Observable<Array<IPizza>> {
@@ -39,6 +48,11 @@ export class PizzaRestService implements IPizzaService {
   private url: string = "http://pizza-store.herokuapp.com/api/pizzas";
 
   constructor(private http: HttpClient) {
+  }
+
+  getPizza(id: string): Observable<IPizza> {
+    const url: string = this.url + '/' + id;
+    return this.http.get<IPizza>(url);
   }
 
   getPizzas(): Observable<Array<IPizza>> {
