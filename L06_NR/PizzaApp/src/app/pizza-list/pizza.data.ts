@@ -5,6 +5,7 @@ import {IPizza} from "./pizza.model";
 
 export let PIZZAS: Array<IPizza> = [
   {
+    _id: '1234',
     name: '4 STAGIONI',
     price: 27.5,
     weight: 550,
@@ -14,17 +15,18 @@ export let PIZZAS: Array<IPizza> = [
     soldOut: false,
     reviews: [{
       stars: 5,
-      body: "I love this pizza!",
+      body: 'I love this pizza!',
       author: "joe@example.org",
       createdOn: 1397490980837
     }, {
       stars: 1,
-      body: "This pizza sucks.",
-      author: "tim@example.org",
+      body: 'This pizza sucks.',
+      author: 'tim@example.org',
       createdOn: 1397490980837
     }]
   },
   {
+    _id: '2345',
     name: 'DIAVOLA',
     price: 25,
     weight: 450,
@@ -34,13 +36,13 @@ export let PIZZAS: Array<IPizza> = [
     soldOut: false,
     reviews: [{
       stars: 3,
-      body: "I think this pizza was just OK, could honestly be more spicy, IMO.",
-      author: "JimmyDean@example.org",
+      body: 'I think this pizza was just OK, could honestly be more spicy, IMO.',
+      author: 'JimmyDean@example.org',
       createdOn: 1397490980837
     }, {
       stars: 4,
-      body: "Any pizza with chilly is for me!",
-      author: "gemsRock@example.org",
+      body: 'Any pizza with chilly is for me!',
+      author: 'gemsRock@example.org',
       createdOn: 1397490980837
     }]
   }
