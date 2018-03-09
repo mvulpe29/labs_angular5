@@ -24,7 +24,7 @@ import {PIZZA_ROUTES} from "./pizza.routes";
   ],
   exports: [
     PizzaListComponent,
-    PizzaDetailsComponent
+    PizzaDetailsComponent,
   ],
   declarations: [
     TabsComponent,
