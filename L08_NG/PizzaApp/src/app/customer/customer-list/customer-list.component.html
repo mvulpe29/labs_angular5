@@ -1,0 +1,7 @@
+<div id="customer" *ngFor='let customer of customers' class="list">
+  <div class="item clickable" [routerLink]="['/customer', customer.id]">
+    <div class="content">
+      <h1> {{customer.id}} </h1>
+    </div>
+  </div>
+</div>
