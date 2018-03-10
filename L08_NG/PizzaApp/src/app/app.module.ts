@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 import {APP_ROUTES} from "./app.routes";
 import {PreloadSelectedModules} from "./app.preloading";
 import {AuthModule} from "./auth/auth.module";
+import {FeatureGuard} from "./app.guards";
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,7 @@ import {AuthModule} from "./auth/auth.module";
     RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadSelectedModules}),
     AuthModule
   ],
-  providers: [PreloadSelectedModules],
+  providers: [PreloadSelectedModules, FeatureGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
